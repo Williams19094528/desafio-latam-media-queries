@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+}
+.pie {
+  grid-area: pie;
+  background-color: rgb(79, 152, 235);
+  color: white;
+  padding: 5px;
+}
+.principal {
+  grid-area: principal;
+}
+.busqueda {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  grid-area: busqueda;
+  border: 2px solid rgb(10, 10, 10);
+  background-color: rgb(79, 152, 235);
+  padding: 10px;
+}
+.lateral {
+  grid-area: lateral;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  padding: 20px;
+}
+
+.inicio {
+  display: none;
+}
+.contacto {
+  display: none;
+}
+.ofertas {
+  display: none;
+}
+.contacto {
+  display: none;
+}
+
+#icon {
+  margin-top: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    "lateral "
+    "busqueda"
+    "principal"
+    "pie";
+}
+
+@media (min-width: 576px) {
+  .inicio {
+    display: inline;
+  }
+  .contacto {
+    display: inline;
+  }
+  #icon {
+    display: none;
+  }
+
+  .grid {
+    grid-template-columns: 2fr 9fr;
+
+    grid-template-areas:
+      "lateral  busqueda "
+      "lateral principal"
+      "pie principal";
+  }
+  .lateral {
+    flex-direction: column;
+    height: 400px;
+  }
+  .gridPrincipal {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .pie {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  .selector {
+    width: 1200px;
+    padding: 10px;
+  }
+}
+
+.style-p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+  background: rgb(205, 244, 255);
+}
+
+.style-p img {
+  width: 300px;
+  height: auto;
+}
+
+.gridPrincipal {
+  display: grid;
+  justify-content: center;
+  padding: 20px;
+  gap: 5px;
+}
+
+.cuadros {
+  text-align: center;
+}
+
+.cuadros button {
+  margin: 0;
+  margin-bottom: 10px;
+}
+.b-c {
+  background: blue;
+  color: white;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+h4 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+
+.pie {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+@media (max-width: 575px) {
+  .pie {
+    text-align: center;
+  }
+}
+
+p {
+  font-size: 20px;
+  font-weight: bolder;
+  border: 1px solid salmon;
+  background: salmon;
+  border-radius: 25px;
+  padding: 15px;
+}
